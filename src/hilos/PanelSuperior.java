@@ -10,6 +10,7 @@ import javax.swing.JPanel;
  */
 class PanelSuperior extends JPanel {
     
+    // CopyOnWriteArrayList es una coleccion o una estructura de datos que permita la modificación concurrente
     CopyOnWriteArrayList<Pelota> pelotas = new CopyOnWriteArrayList<>();
     
     public void add(Pelota p) {

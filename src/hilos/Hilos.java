@@ -51,9 +51,11 @@ public class Hilos extends JFrame {
 
     private void detener() {
         // t.stop(); Obsoleto
-        Thread threadToStop = threads.get(threads.size()-1);
-        threadToStop.interrupt();
-        threads.remove(threadToStop);
+        if (!threads.isEmpty())  {
+            Thread threadToStop = threads.get(threads.size() - 1);
+            threadToStop.interrupt();
+            threads.remove(threadToStop);
+        }
     }
 
     /**
